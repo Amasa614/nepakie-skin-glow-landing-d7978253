@@ -2,6 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
+import SoapCarousel from '../components/SoapCarousel';
 import ProductDetails from '../components/ProductDetails';
 import Reviews from '../components/Reviews';
 import About from '../components/About';
@@ -11,6 +12,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
+      <SoapCarousel />
       <ProductDetails />
       <Reviews />
       <About />

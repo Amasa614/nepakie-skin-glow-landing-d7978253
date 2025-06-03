@@ -24,8 +24,8 @@ const Hero = () => {
         <div className="flex justify-center">
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&h=600" 
-              alt="NEPAKIE Organic Shower Gel"
+              src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&h=600" 
+              alt="Person enjoying a relaxing shower"
               className="w-80 h-80 object-cover rounded-2xl shadow-lg"
             />
             <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg">
