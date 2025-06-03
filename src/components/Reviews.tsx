@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Reviews = () => {
@@ -25,7 +24,7 @@ const Reviews = () => {
 
   return (
     <section id="reviews" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl text-gray-800 mb-4">What Our Customers Say</h2>
           <p className="text-gray-600">Real experiences from people who love NEPAKIE</p>

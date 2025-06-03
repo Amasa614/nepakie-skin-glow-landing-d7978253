@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
@@ -19,7 +18,7 @@ const Index = () => {
       
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 py-12">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="text-2xl font-light text-gray-800 mb-4">NEPAKIE</div>
           <p className="text-gray-600 mb-8">Handcrafted organic soap for sensitive skin</p>
           <div className="flex justify-center gap-8 text-gray-500">

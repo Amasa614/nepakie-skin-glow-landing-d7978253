@@ -3,13 +3,13 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-white pt-20">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8 animate-fade-in">
-          <h1 className="text-4xl lg:text-5xl text-gray-800 leading-tight">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-white pt-8">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="space-y-10 animate-fade-in">
+          <h1 className="text-5xl lg:text-6xl text-gray-800 leading-tight">
             Handcrafted Organic Soap for Sensitive Skin
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed">
             Pure, gentle cleansing with natural ingredients that care for your skin and the environment.
           </p>
           <div className="flex gap-4">
@@ -26,7 +26,7 @@ const Hero = () => {
             <img 
               src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&h=600" 
               alt="Person enjoying a relaxing shower"
-              className="w-80 h-80 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+              className="w-96 h-96 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
             />
             <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110">
               <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">

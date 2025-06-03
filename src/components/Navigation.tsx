@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Navigation = () => {
@@ -11,7 +10,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/20 backdrop-blur-md border-b border-white/20 z-50 py-4 shadow-sm">
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="text-2xl font-light text-gray-800 hover:text-gray-600 transition-colors duration-300">
           NEPAKIE
         </div>

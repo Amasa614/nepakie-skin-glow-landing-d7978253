@@ -1,10 +1,9 @@
-
 import React from 'react';
 
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <img 
