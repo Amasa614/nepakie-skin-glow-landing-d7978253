@@ -13,39 +13,39 @@ const SoapCarousel = () => {
 
   const soapImages = [
     {
-      src: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=800&h=800",
-      alt: "NEPAKIE Organic Shower Gel - Lavender",
-      title: "Lavender Bliss"
+      src: "/images/nepakie_catlog_1.png",
+      alt: "NEPAKIE Papaya Brightening Bath Gel - Original",
+      title: "Papaya Brightening Gel"
     },
     {
-      src: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&h=800",
-      alt: "NEPAKIE Organic Soap Bar - Chamomile",
-      title: "Chamomile Calm"
+      src: "/images/nepakie_catalog_2.png",
+      alt: "NEPAKIE Bath Product Collection",
+      title: "Bath Collection"
     },
     {
-      src: "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=800&h=800",
-      alt: "NEPAKIE Natural Soap Collection",
-      title: "Essential Collection"
+      src: "/images/neapakie_catalog_2.png",
+      alt: "NEPAKIE Product Range",
+      title: "Product Range"
     },
     {
-      src: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&h=800",
-      alt: "NEPAKIE Handcrafted Soap - Tea Tree",
-      title: "Tea Tree Fresh"
+      src: "/images/nepakie_catalog_3.png",
+      alt: "NEPAKIE Skincare Products",
+      title: "Skincare Essentials"
     },
     {
-      src: "https://images.unsplash.com/photo-1615397587950-3cbb55f2d11d?auto=format&fit=crop&w=800&h=800",
-      alt: "NEPAKIE Luxury Soap Set",
-      title: "Luxury Gift Set"
+      src: "/images/nepakie_catalog_5.png",
+      alt: "NEPAKIE Natural Bath Products",
+      title: "Natural Bath Line"
     },
     {
-      src: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=800&h=800",
-      alt: "NEPAKIE Rose Garden Soap",
-      title: "Rose Garden"
+      src: "/images/nepakie_catalog_6.png",
+      alt: "NEPAKIE Complete Product Set",
+      title: "Complete Set"
     },
     {
-      src: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&h=800",
-      alt: "NEPAKIE Mint Fresh Soap",
-      title: "Mint Fresh"
+      src: "/images/nepakie_section_2.png",
+      alt: "NEPAKIE Product Showcase",
+      title: "Product Showcase"
     }
   ];
 
@@ -91,9 +91,9 @@ const SoapCarousel = () => {
       {/* Full width container with no horizontal padding */}
       <div className="w-full">
         <div className="text-center mb-16 animate-fade-in px-6">
-          <h2 className="text-3xl text-gray-800 mb-4">Our Handcrafted Collection</h2>
+          <h2 className="text-3xl text-gray-800 mb-4">NEPAKIE Product Gallery</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover our range of premium organic soaps, each carefully crafted with natural ingredients for your skin's wellbeing.
+            Explore our complete range of papaya-infused skincare products, each formulated with natural ingredients for healthy, glowing skin.
           </p>
         </div>
 
@@ -109,15 +109,17 @@ const SoapCarousel = () => {
             <CarouselContent data-carousel-content className="ml-6 gap-8 pb-4">
               {soapImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-0 basis-auto">
-                  <div className="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-gray-100/80 min-w-[380px] border border-gray-100/50">
+                  <div className="relative bg-gray-50/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:scale-105 min-w-[380px] h-[400px] border border-gray-100/50">
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-80 h-80 object-cover rounded-xl mb-6 transition-transform duration-500 hover:scale-110 shadow-lg"
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     />
-                    <h3 className="text-xl font-medium text-gray-800 text-center transition-colors duration-200">
-                      {image.title}
-                    </h3>
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-6">
+                      <h3 className="text-xl font-medium text-white text-center transition-colors duration-200">
+                        {image.title}
+                      </h3>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
@@ -131,12 +133,6 @@ const SoapCarousel = () => {
             <CarouselPrevious className="left-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg" />
             <CarouselNext className="right-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg" />
           </Carousel>
-        </div>
-
-        <div className="text-center mt-12 animate-fade-in px-6">
-          <button className="bg-orange-100 text-orange-800 px-8 py-3 rounded-full hover:bg-orange-200 transition-all duration-300 hover:scale-105 hover:shadow-md">
-            Shop Collection
-          </button>
         </div>
       </div>
     </section>

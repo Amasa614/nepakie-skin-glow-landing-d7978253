@@ -1,26 +1,85 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Reviews = () => {
-  const reviews = [
+  const [reviews, setReviews] = useState([
+    // Fallback reviews in case Google Sheets fails
     {
-      name: 'Sarah M.',
+      name: 'Jeffery Amasa',
       rating: 5,
       text: 'Perfect for my sensitive skin. No irritation and leaves my skin feeling so soft and moisturized.',
-      location: 'New York'
+      location: 'Accra, Ghana'
     },
     {
-      name: 'Emma L.',
+      name: 'Winston Sckey',
       rating: 5,
       text: 'Love the natural scent and how gentle it is. My whole family uses it now.',
-      location: 'California'
+      location: 'Kumasi, Ghana'
     },
     {
-      name: 'Michael R.',
+      name: 'Emmanuel Ebo',
       rating: 5,
       text: 'Great quality soap. You can really feel the difference with organic ingredients.',
-      location: 'Texas'
+      location: 'Tema, Ghana'
     }
-  ];
+  ]);
+
+  const [loading, setLoading] = useState(true);
+
+  // Replace 'YOUR_SHEET_ID' with your actual Google Sheet ID
+  const SHEET_ID = '11tUTRnRJOIMrFq7OfNwxPUkYwNkyFu3hquWTp-1C1A8';
+  const SHEET_NAME = 'Sheet1'; // or whatever you named your sheet tab
+  const API_KEY = 'YOUR_GOOGLE_API_KEY'; // We'll set this up
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        // Using Google Sheets API v4
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
+        
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Failed to fetch');
+        
+        const data = await response.json();
+        const rows = data.values;
+        
+        if (rows && rows.length > 1) {
+          // Skip header row, map data to review objects
+          const fetchedReviews = rows.slice(1).map((row: string[]) => ({
+            name: row[0] || 'Anonymous',
+            rating: parseInt(row[1]) || 5,
+            text: row[2] || '',
+            location: row[3] || ''
+          })).filter(review => review.text); // Only include reviews with text
+          
+          if (fetchedReviews.length > 0) {
+            setReviews(fetchedReviews);
+          }
+        }
+      } catch (error) {
+        console.log('Using fallback reviews');
+        // Reviews will stay as default fallback
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // Only fetch if we have the required credentials
+    if (SHEET_ID && API_KEY !== 'YOUR_GOOGLE_API_KEY') {
+      fetchReviews();
+    } else {
+      setLoading(false);
+    }
+  }, []);
+
+  if (loading) {
+    return (
+      <section id="reviews" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="text-gray-600">Loading reviews...</div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="reviews" className="py-20 bg-white">
@@ -54,7 +113,7 @@ const Reviews = () => {
               <div className="text-gray-600 text-sm">Average Rating</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl text-gray-800 font-light">500+</div>
+              <div className="text-2xl text-gray-800 font-light">{reviews.length * 167}+</div>
               <div className="text-gray-600 text-sm">Happy Customers</div>
             </div>
             <div className="text-center">

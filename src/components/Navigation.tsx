@@ -33,12 +33,6 @@ const Navigation = () => {
           >
             Reviews
           </button>
-          <button 
-            onClick={() => scrollToSection('about')}
-            className="text-gray-600 hover:text-gray-800 transition-all duration-300 hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gray-800 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-          >
-            About
-          </button>
         </div>
       </div>
     </nav>

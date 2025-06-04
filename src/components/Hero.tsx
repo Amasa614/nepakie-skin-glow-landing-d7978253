@@ -1,6 +1,13 @@
 import React from 'react';
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-white pt-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -15,7 +22,10 @@ const Hero = () => {
             <button className="bg-orange-100 text-orange-800 px-8 py-3 rounded-full hover:bg-orange-200 transition-all duration-300 hover:scale-105 hover:shadow-md">
               Shop Now
             </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:bg-gray-50 transition-all duration-300 hover:scale-105 hover:shadow-md">
+            <button 
+              onClick={() => scrollToSection('product')}
+              className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:bg-gray-50 transition-all duration-300 hover:scale-105 hover:shadow-md"
+            >
               View Ingredients
             </button>
           </div>
