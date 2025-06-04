@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import SoapCarousel from '../components/SoapCarousel';
 import ProductDetails from '../components/ProductDetails';
 import Reviews from '../components/Reviews';
+import FAQ from '../components/FAQ';
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <ProductDetails />
       <SoapCarousel />
       <Reviews />
+      <FAQ />
       
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 py-12">
