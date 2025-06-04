@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Hero = () => {
@@ -13,7 +12,7 @@ const Hero = () => {
             Pure, gentle cleansing with natural ingredients that care for your skin and the environment.
           </p>
           <div className="flex gap-4">
-            <button className="bg-green-100 text-green-800 px-8 py-3 rounded-full hover:bg-green-200 transition-all duration-300 hover:scale-105 hover:shadow-md">
+            <button className="bg-orange-100 text-orange-800 px-8 py-3 rounded-full hover:bg-orange-200 transition-all duration-300 hover:scale-105 hover:shadow-md">
               Shop Now
             </button>
             <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:bg-gray-50 transition-all duration-300 hover:scale-105 hover:shadow-md">
@@ -24,13 +23,13 @@ const Hero = () => {
         <div className="flex justify-center animate-fade-in">
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&h=600" 
-              alt="Person enjoying a relaxing shower"
-              className="w-96 h-96 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+              src="/images/nepakie hero.png" 
+              alt="Nepakie organic soap hero image"
+              className="w-full max-w-md h-auto object-contain rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
             />
             <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                <span className="text-green-600 text-sm">✓</span>
+              <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                <span className="text-orange-600 text-sm">✓</span>
               </div>
             </div>
           </div>
