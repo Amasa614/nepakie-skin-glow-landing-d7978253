@@ -13,8 +13,8 @@ const FAQ = () => {
       answer: "For best results, use NEPAKIE during your shower or bath routine. Apply a generous amount to wet skin, gently massage in circular motions to create a rich lather, then rinse thoroughly with warm water. Use daily for optimal skin brightening benefits. Avoid contact with eyes."
     },
     {
-      question: "What's the difference between brightening and bleaching?",
-      answer: "Brightening and bleaching are fundamentally different approaches to skincare. Brightening works by gently exfoliating dead skin cells and promoting natural cell turnover to reveal your skin's natural radiance - it enhances your existing skin tone. Bleaching, on the other hand, uses harsh chemicals to artificially lighten skin by reducing melanin production, which can cause damage and uneven results. NEPAKIE uses natural papaya enzymes to brighten your skin safely without harsh bleaching chemicals."
+      question: "What does brightening mean?",
+      answer: "Brightening and bleaching are fundamentally different approaches to skincare. Brightening works by gently exfoliating dead skin cells and promoting natural cell turnover to reveal your skin's natural radiance - it enhances your existing skin tone. NEPAKIE uses natural papaya enzymes to brighten your skin safely without harsh bleaching chemicals."
     },
     {
       question: "How often should I use NEPAKIE?",
