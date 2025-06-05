@@ -14,38 +14,31 @@ const SoapCarousel = () => {
   const soapImages = [
     {
       src: "/images/nepakie_catlog_1.png",
-      alt: "NEPAKIE Papaya Brightening Bath Gel - Original",
-      title: "Papaya Brightening Gel"
+      alt: "NEPAKIE Papaya Brightening Bath Gel - Original"
     },
     {
       src: "/images/nepakie_catalog_2.png",
-      alt: "NEPAKIE Bath Product Collection",
-      title: "Bath Collection"
+      alt: "NEPAKIE Bath Product Collection"
     },
     {
       src: "/images/neapakie_catalog_2.png",
-      alt: "NEPAKIE Product Range",
-      title: "Product Range"
+      alt: "NEPAKIE Product Range"
     },
     {
       src: "/images/nepakie_catalog_3.png",
-      alt: "NEPAKIE Skincare Products",
-      title: "Skincare Essentials"
+      alt: "NEPAKIE Skincare Products"
     },
     {
       src: "/images/nepakie_catalog_5.png",
-      alt: "NEPAKIE Natural Bath Products",
-      title: "Natural Bath Line"
+      alt: "NEPAKIE Natural Bath Products"
     },
     {
       src: "/images/nepakie_catalog_6.png",
-      alt: "NEPAKIE Complete Product Set",
-      title: "Complete Set"
+      alt: "NEPAKIE Complete Product Set"
     },
     {
       src: "/images/nepakie_section_2.png",
-      alt: "NEPAKIE Product Showcase",
-      title: "Product Showcase"
+      alt: "NEPAKIE Product Showcase"
     }
   ];
 
@@ -97,7 +90,7 @@ const SoapCarousel = () => {
           </p>
         </div>
 
-        <div ref={carouselRef} className="relative w-full px-12">
+        <div ref={carouselRef} className="relative w-full px-4 sm:px-12">
           <Carousel
             opts={{
               align: "start",
@@ -106,20 +99,15 @@ const SoapCarousel = () => {
             }}
             className="w-full"
           >
-            <CarouselContent data-carousel-content className="ml-6 gap-8 pb-4">
+            <CarouselContent data-carousel-content className="ml-2 sm:ml-6 gap-4 sm:gap-8 pb-4">
               {soapImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-0 basis-auto">
-                  <div className="relative bg-gray-50/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:scale-105 min-w-[380px] h-[400px] border border-gray-100/50">
+                  <div className="relative bg-gray-50/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:scale-105 min-w-[280px] sm:min-w-[380px] h-[300px] sm:h-[400px] border border-gray-100/50">
                     <img
                       src={image.src}
                       alt={image.alt}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-6">
-                      <h3 className="text-xl font-medium text-white text-center transition-colors duration-200">
-                        {image.title}
-                      </h3>
-                    </div>
                   </div>
                 </CarouselItem>
               ))}
@@ -130,8 +118,8 @@ const SoapCarousel = () => {
             </CarouselContent>
             
             {/* Navigation Arrows */}
-            <CarouselPrevious className="left-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg" />
-            <CarouselNext className="right-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg" />
+            <CarouselPrevious className="left-1 sm:left-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg" />
+            <CarouselNext className="right-1 sm:right-2 bg-white/90 backdrop-blur-sm border-gray-200 hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg" />
           </Carousel>
         </div>
       </div>

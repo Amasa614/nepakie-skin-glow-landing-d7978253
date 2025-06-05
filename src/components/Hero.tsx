@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-white pt-8">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-white pt-20 md:pt-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-10 animate-fade-in">
           <h1 className="text-5xl lg:text-6xl text-gray-800 leading-tight">
