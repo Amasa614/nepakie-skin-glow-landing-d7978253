@@ -14,7 +14,7 @@ const FAQ = () => {
     },
     {
       question: "What does brightening mean?",
-      answer: "Brightening and bleaching are fundamentally different approaches to skincare. Brightening works by gently exfoliating dead skin cells and promoting natural cell turnover to reveal your skin's natural radiance - it enhances your existing skin tone. NEPAKIE uses natural papaya enzymes to brighten your skin safely without harsh bleaching chemicals."
+      answer: "Brightening works by gently exfoliating dead skin cells and promoting natural cell turnover to reveal your skin's natural radiance - it enhances your existing skin tone. NEPAKIE uses natural papaya enzymes to brighten your skin safely without harsh bleaching chemicals."
     },
     {
       question: "How often should I use NEPAKIE?",
@@ -26,7 +26,7 @@ const FAQ = () => {
     },
     {
       question: "Can I use NEPAKIE on my face?",
-      answer: "NEPAKIE is specifically formulated as a bath gel for body use. For facial care, we recommend using products specifically designed for the delicate facial skin. Always avoid the eye area when using any skincare products."
+      answer: "Yes! NEPAKIE can be used on your face and all body parts. Our gentle papaya formula is safe for facial use and works effectively on all areas of your body to promote natural brightening and radiance. Always avoid the eye area when using any skincare products."
     },
     {
       question: "What makes NEPAKIE different from other brightening products?",

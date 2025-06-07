@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Leaf } from 'lucide-react';
 import IngredientModal from './IngredientModal';
+import DistributorsModal from './DistributorsModal';
 
 const ProductDetails = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDistributorsModalOpen, setIsDistributorsModalOpen] = useState(false);
 
   const ingredients = [
     'Water',
@@ -90,7 +92,10 @@ const ProductDetails = () => {
               </div>
 
               <div className="flex gap-4 pt-6">
-                <button className="bg-orange-600 text-white px-8 py-3 rounded-full hover:bg-orange-700 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <button 
+                  onClick={() => setIsDistributorsModalOpen(true)}
+                  className="bg-orange-600 text-white px-8 py-3 rounded-full hover:bg-orange-700 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
                   Shop Now
                 </button>
                 <button 
@@ -182,6 +187,10 @@ const ProductDetails = () => {
       <IngredientModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
+      />
+      <DistributorsModal 
+        isOpen={isDistributorsModalOpen} 
+        onClose={() => setIsDistributorsModalOpen(false)} 
       />
     </>
   );
