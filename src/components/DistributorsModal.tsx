@@ -9,40 +9,34 @@ interface DistributorsModalProps {
 const DistributorsModal: React.FC<DistributorsModalProps> = ({ isOpen, onClose }) => {
   const distributors = [
     {
-      name: "Accra Beauty Hub",
-      location: "Osu, Accra",
-      phone: "+233-244-567-890",
-      mapLink: "https://maps.google.com/?q=Osu,+Accra,+Ghana"
+      name: "Aseda Wholesale & Retail",
+      location: "Spintex Road, Accra",
+      phone: "+233 257 630 001",
+      mapLink: "https://maps.google.com/?q=Aseda+Wholesale+Retail+Spintex+Road+Accra+Ghana"
     },
     {
-      name: "Golden Gate Cosmetics",
-      location: "Kumasi Central Market",
-      phone: "+233-244-123-456",
-      mapLink: "https://maps.google.com/?q=Kumasi+Central+Market,+Ghana"
+      name: "First Choice Hair & Beauty",
+      location: "Spintex Road, Adjacent Zenith Bank, Accra",
+      phone: "+233 244 374 894",
+      mapLink: "https://maps.google.com/?q=First+Choice+Hair+Beauty+Spintex+Road+Adjacent+Zenith+Bank+Accra+Ghana"
     },
     {
-      name: "Takoradi Wellness Store",
-      location: "Market Circle, Takoradi",
-      phone: "+233-244-789-012",
-      mapLink: "https://maps.google.com/?q=Market+Circle,+Takoradi,+Ghana"
+      name: "NN Ventures",
+      location: "Farm Vivian Junction, Ashaiman Road",
+      phone: "+233 245 261 620",
+      mapLink: "https://maps.google.com/?q=NN+Ventures+Farm+Vivian+Junction+Ashaiman+Road+Ghana"
     },
     {
-      name: "Northern Glow Enterprises",
-      location: "Tamale Central Market",
-      phone: "+233-244-345-678",
-      mapLink: "https://maps.google.com/?q=Tamale+Central+Market,+Ghana"
+      name: "Rossy Shop",
+      location: "Dansoman, Accra",
+      phone: "+233 243 251 953",
+      mapLink: "https://maps.google.com/?q=Rossy+Shop+Dansoman+Accra+Ghana"
     },
     {
-      name: "Volta Beauty Corner",
-      location: "Ho Township",
-      phone: "+233-244-901-234",
-      mapLink: "https://maps.google.com/?q=Ho+Township,+Ghana"
-    },
-    {
-      name: "Cape Coast Natural Care",
-      location: "Cape Coast Castle Road",
-      phone: "+233-244-456-789",
-      mapLink: "https://maps.google.com/?q=Cape+Coast+Castle+Road,+Ghana"
+      name: "Madam Akua",
+      location: "Koforidua, Eastern Region",
+      phone: "+233 243 162 780",
+      mapLink: "https://maps.google.com/?q=Madam+Akua+Koforidua+Eastern+Region+Ghana"
     }
   ];
 
