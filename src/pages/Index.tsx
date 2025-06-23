@@ -30,7 +30,7 @@ const Index = () => {
               <div className="space-y-2 text-gray-600 text-sm">
                 <p>📞 +233-264814013</p>
                 <p>📧 info@nepakie.com</p>
-                <p>📍 Lashihi Comm 17, GT-325-5519</p>
+                <p>📍 Lashibi Comm 17, GT-325-5519</p>
               </div>
             </div>
             <div>
