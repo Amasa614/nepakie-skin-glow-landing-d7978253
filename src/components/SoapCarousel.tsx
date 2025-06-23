@@ -21,7 +21,7 @@ const SoapCarousel = () => {
       alt: "NEPAKIE Bath Product Collection"
     },
     {
-      src: "public/images/winnep.png",
+      src: "/images/winnep.png",
       alt: "NEPAKIE Product Range"
     },
     {
