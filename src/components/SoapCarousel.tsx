@@ -13,11 +13,11 @@ const SoapCarousel = () => {
 
   const soapImages = [
     {
-      src: "/images/nepakie_catlog_1.png",
+      src: "/images/IMG_0271.jpg",
       alt: "NEPAKIE Papaya Brightening Bath Gel - Original"
     },
     {
-      src: "/images/IMG_0271.jpg",
+      src: "/images/IMG_0278.jpg",
       alt: "NEPAKIE Bath Product Collection"
     },
     {
@@ -25,11 +25,11 @@ const SoapCarousel = () => {
       alt: "NEPAKIE Product Range"
     },
     {
-      src: "/images/nepakie_catalog_3.png",
+      src: "/images/IMG_0250.jpg",
       alt: "NEPAKIE Skincare Products"
     },
     {
-      src: "/images/nepakie_catalog_5.png",
+      src: "/images/IMG_0274.jpg",
       alt: "NEPAKIE Natural Bath Products"
     },
     {
