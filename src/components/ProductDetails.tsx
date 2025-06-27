@@ -50,7 +50,7 @@ const ProductDetails = () => {
               <img 
                 src="/images/pour.jpg" 
                 alt="NEPAKIE Papaya Brightening Bath Gel"
-                className="w-full h-[28rem] sm:h-[32rem] lg:h-[36rem] xl:h-[40rem] object-cover rounded-2xl shadow-xl"
+                className="w-full h-96 object-cover rounded-2xl shadow-xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center gap-3">
