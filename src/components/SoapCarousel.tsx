@@ -13,7 +13,7 @@ const SoapCarousel = () => {
 
   const soapImages = [
     {
-      src: "/images/IMG_0271.jpg",
+      src: "/images/IMG_0213.jpg",
       alt: "NEPAKIE Papaya Brightening Bath Gel - Original"
     },
     {
@@ -33,7 +33,7 @@ const SoapCarousel = () => {
       alt: "NEPAKIE Natural Bath Products"
     },
     {
-      src: "/images/winnep.png",
+      src: "/images/first.jpg",
       alt: "NEPAKIE Product Showcase"
     }
   ];
