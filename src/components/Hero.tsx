@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="flex justify-center animate-fade-in">
             <div className="relative">
               <img 
-                src="/images/nepakie hero.png" 
+                src="/images/IMG_0271.jpg" 
                 alt="Nepakie organic soap hero image"
                 className="w-full max-w-md h-auto object-contain rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
               />

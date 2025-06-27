@@ -48,7 +48,7 @@ const ProductDetails = () => {
             {/* Image Section */}
             <div className="relative">
               <img 
-                src="/images/nepakie_section_2.png" 
+                src="/images/enhancedwin.png" 
                 alt="NEPAKIE Papaya Brightening Bath Gel"
                 className="w-full h-96 object-cover rounded-2xl shadow-xl"
               />
