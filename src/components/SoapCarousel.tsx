@@ -13,6 +13,11 @@ const SoapCarousel = () => {
 
   const soapImages = [
     {
+      src: "/images/sticks.jpg",
+      alt: "NEPAKIE Product Range"
+    },
+
+    {
       src: "/images/IMG_0263.jpg",
       alt: "NEPAKIE Product Range"
     },
@@ -28,11 +33,6 @@ const SoapCarousel = () => {
     {
       src: "/images/IMG_0278.jpg",
       alt: "NEPAKIE Bath Product Collection"
-    },
-    
-    {
-      src: "/images/IMG_0250.jpg",
-      alt: "NEPAKIE Skincare Products"
     },
     
     {
