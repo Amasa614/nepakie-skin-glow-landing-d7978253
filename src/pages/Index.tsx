@@ -42,15 +42,32 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex gap-8 text-gray-500 text-sm">
-              <span className="hover:text-orange-600 cursor-pointer transition-colors">Privacy Policy</span>
-              <span>•</span>
-              <span className="hover:text-orange-600 cursor-pointer transition-colors">Terms of Service</span>
-              <span>•</span>
-              <span className="hover:text-orange-600 cursor-pointer transition-colors">Customer Support</span>
+          <div className="border-t border-gray-200 pt-6 space-y-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex gap-8 text-gray-500 text-sm">
+                <span className="hover:text-orange-600 cursor-pointer transition-colors">Privacy Policy</span>
+                <span>•</span>
+                <span className="hover:text-orange-600 cursor-pointer transition-colors">Terms of Service</span>
+                <span>•</span>
+                <span className="hover:text-orange-600 cursor-pointer transition-colors">Customer Support</span>
+              </div>
+              <p className="text-gray-500 text-sm">© 2025 NEPAKIE. All rights reserved.</p>
             </div>
-            <p className="text-gray-500 text-sm">© 2024 NEPAKIE. All rights reserved.</p>
+            
+            {/* Razorbill Technologies Credit */}
+            <div className="text-center pt-4 border-t border-gray-100">
+              <p className="text-sm text-gray-500">
+                Powered by{' '}
+                <a 
+                  href="https://executiveaid.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium underline decoration-1 underline-offset-2 hover:decoration-2 transition-all duration-200"
+                >
+                  Razorbill Technologies
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>
