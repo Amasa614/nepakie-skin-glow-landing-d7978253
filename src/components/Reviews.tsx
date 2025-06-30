@@ -47,29 +47,29 @@ const Reviews = () => {
         setReviews([
           {
             id: '1',
-      name: 'Jeffery Amasa',
-      rating: 5,
-      text: 'Perfect for my sensitive skin. No irritation and leaves my skin feeling so soft and moisturized.',
+            name: 'Jeffery Amasa',
+            rating: 5,
+            text: 'Perfect for my sensitive skin. No irritation and leaves my skin feeling so soft and moisturized.',
             location: 'Accra, Ghana',
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
             approved: true
-    },
-    {
+          },
+          {
             id: '2',
-      name: 'Winston Sckey',
-      rating: 5,
-      text: 'Love the natural scent and how gentle it is. My whole family uses it now.',
+            name: 'Winston Sckey',
+            rating: 5,
+            text: 'Love the natural scent and how gentle it is. My whole family uses it now.',
             location: 'Kumasi, Ghana',
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
             approved: true
-    },
-    {
+          },
+          {
             id: '3',
-      name: 'Emmanuel Ebo',
-      rating: 5,
-      text: 'Great quality soap. You can really feel the difference with organic ingredients.',
+            name: 'Emmanuel Ebo',
+            rating: 5,
+            text: 'Great quality soap. You can really feel the difference with organic ingredients.',
             location: 'Tema, Ghana',
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
@@ -82,10 +82,37 @@ const Reviews = () => {
     } catch (err) {
       console.error('Error fetching reviews:', err);
       setError('Failed to load reviews. Please try again later.');
-      } finally {
-        setLoading(false);
-      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Calculate statistics based on actual reviews
+  const calculateStats = () => {
+    if (reviews.length === 0) {
+      return {
+        averageRating: 0,
+        totalReviews: 0,
+        recommendationRate: 0
+      };
+    }
+
+    // Calculate average rating
+    const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+    const averageRating = totalRating / reviews.length;
+
+    // Calculate recommendation rate (4-5 star reviews)
+    const positiveReviews = reviews.filter(review => review.rating >= 4).length;
+    const recommendationRate = (positiveReviews / reviews.length) * 100;
+
+    return {
+      averageRating: Math.round(averageRating * 10) / 10, // Round to 1 decimal
+      totalReviews: reviews.length,
+      recommendationRate: Math.round(recommendationRate)
     };
+  };
+
+  const stats = calculateStats();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -300,16 +327,16 @@ const Reviews = () => {
                   <CarouselItem key={review.id} className="pl-0 basis-auto">
                     <div className="w-[85vw] sm:w-[70vw] md:w-[450px] lg:w-[380px] xl:w-[420px]">
                       <div className="bg-gray-50 p-6 md:p-8 rounded-2xl h-full flex flex-col hover:shadow-lg transition-shadow duration-300">
-              <div className="flex gap-1 mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-lg">★</span>
-                ))}
-              </div>
+                        <div className="flex gap-1 mb-4">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <span key={i} className="text-yellow-400 text-lg">★</span>
+                          ))}
+                        </div>
                         <p className="text-gray-700 mb-6 leading-relaxed flex-1">"{review.text}"</p>
-              <div>
-                <p className="text-gray-800 font-medium">{review.name}</p>
+                        <div>
+                          <p className="text-gray-800 font-medium">{review.name}</p>
                           {review.location && (
-                <p className="text-gray-500 text-sm">{review.location}</p>
+                            <p className="text-gray-500 text-sm">{review.location}</p>
                           )}
                         </div>
                       </div>
@@ -335,21 +362,28 @@ const Reviews = () => {
         ) : (
           <div className="text-center py-12">
             <p className="text-gray-600">No reviews yet. Be the first to share your experience!</p>
-        </div>
+          </div>
         )}
 
+        {/* Dynamic Statistics */}
         <div className="text-center mt-12">
           <div className="flex justify-center items-center gap-8 flex-wrap">
             <div className="text-center">
-              <div className="text-2xl text-gray-800 font-light">4.9/5</div>
+              <div className="text-2xl text-gray-800 font-light">
+                {reviews.length > 0 ? `${stats.averageRating}/5` : '--'}
+              </div>
               <div className="text-gray-600 text-sm">Average Rating</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl text-gray-800 font-light">{Math.max(reviews.length * 167, 500)}+</div>
+              <div className="text-2xl text-gray-800 font-light">
+                {reviews.length > 0 ? `${stats.totalReviews}+` : '--'}
+              </div>
               <div className="text-gray-600 text-sm">Happy Customers</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl text-gray-800 font-light">98%</div>
+              <div className="text-2xl text-gray-800 font-light">
+                {reviews.length > 0 ? `${stats.recommendationRate}%` : '--'}
+              </div>
               <div className="text-gray-600 text-sm">Would Recommend</div>
             </div>
           </div>
