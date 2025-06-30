@@ -1,13 +1,14 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+// Direct Supabase configuration for deployment
+const supabaseUrl = 'https://rwggiglfxgcxblvnyvsg.supabase.co'
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ3Z2dpZ2xmeGdjeGJsdm55dnNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTExNDI3OTEsImV4cCI6MjA2NjcxODc5MX0.bPwAr68oUjarQrmWd-Zaf54DukdMP9C06mrgq-I2_vM'
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables')
-}
+// Fallback to environment variables if available (for local development)
+const finalUrl = import.meta.env.VITE_SUPABASE_URL || supabaseUrl
+const finalKey = import.meta.env.VITE_SUPABASE_ANON_KEY || supabaseAnonKey
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(finalUrl, finalKey)
 
 // Types for our database
 export interface Review {

@@ -47,29 +47,29 @@ const Reviews = () => {
         setReviews([
           {
             id: '1',
-            name: 'Jeffery Amasa',
-            rating: 5,
-            text: 'Perfect for my sensitive skin. No irritation and leaves my skin feeling so soft and moisturized.',
+      name: 'Jeffery Amasa',
+      rating: 5,
+      text: 'Perfect for my sensitive skin. No irritation and leaves my skin feeling so soft and moisturized.',
             location: 'Accra, Ghana',
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
             approved: true
-          },
-          {
+    },
+    {
             id: '2',
-            name: 'Winston Sckey',
-            rating: 5,
-            text: 'Love the natural scent and how gentle it is. My whole family uses it now.',
+      name: 'Winston Sckey',
+      rating: 5,
+      text: 'Love the natural scent and how gentle it is. My whole family uses it now.',
             location: 'Kumasi, Ghana',
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
             approved: true
-          },
-          {
+    },
+    {
             id: '3',
-            name: 'Emmanuel Ebo',
-            rating: 5,
-            text: 'Great quality soap. You can really feel the difference with organic ingredients.',
+      name: 'Emmanuel Ebo',
+      rating: 5,
+      text: 'Great quality soap. You can really feel the difference with organic ingredients.',
             location: 'Tema, Ghana',
             created_at: new Date().toISOString(),
             updated_at: new Date().toISOString(),
@@ -82,10 +82,10 @@ const Reviews = () => {
     } catch (err) {
       console.error('Error fetching reviews:', err);
       setError('Failed to load reviews. Please try again later.');
-    } finally {
-      setLoading(false);
-    }
-  };
+      } finally {
+        setLoading(false);
+      }
+    };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -300,16 +300,16 @@ const Reviews = () => {
                   <CarouselItem key={review.id} className="pl-0 basis-auto">
                     <div className="w-[85vw] sm:w-[70vw] md:w-[450px] lg:w-[380px] xl:w-[420px]">
                       <div className="bg-gray-50 p-6 md:p-8 rounded-2xl h-full flex flex-col hover:shadow-lg transition-shadow duration-300">
-                        <div className="flex gap-1 mb-4">
-                          {[...Array(review.rating)].map((_, i) => (
-                            <span key={i} className="text-yellow-400 text-lg">★</span>
-                          ))}
-                        </div>
+              <div className="flex gap-1 mb-4">
+                {[...Array(review.rating)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                ))}
+              </div>
                         <p className="text-gray-700 mb-6 leading-relaxed flex-1">"{review.text}"</p>
-                        <div>
-                          <p className="text-gray-800 font-medium">{review.name}</p>
+              <div>
+                <p className="text-gray-800 font-medium">{review.name}</p>
                           {review.location && (
-                            <p className="text-gray-500 text-sm">{review.location}</p>
+                <p className="text-gray-500 text-sm">{review.location}</p>
                           )}
                         </div>
                       </div>
@@ -335,7 +335,7 @@ const Reviews = () => {
         ) : (
           <div className="text-center py-12">
             <p className="text-gray-600">No reviews yet. Be the first to share your experience!</p>
-          </div>
+        </div>
         )}
 
         <div className="text-center mt-12">
